@@ -1,0 +1,17 @@
+.container {
+  max-width: 800px;
+  margin: auto;
+}
+
+#newTask {
+  height: 35px;
+  width: 80%;
+}
+
+button {
+  height: 40px;
+  background-color: cornflowerblue;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
