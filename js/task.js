@@ -31,11 +31,10 @@ function updateScreen() {
   var list = "<ul>";
 
   tasks.forEach((task) => {
-    list += "<li id-data=" + task.id + ">" + task.data.description + "</li>";
-    list +=
-      "<button onclick=deleteTask(this) id-data=" +
-      task.id +
-      ">Apagar</button>";
+    list += `<li class="list-item" id-data="${task.id}">
+    <p>${task.data.description}</p>
+    <button onclick="deleteTask(${task.id})">Apagar</button>
+    </li>`;
   });
 
   list += "</ul>";
@@ -44,10 +43,14 @@ function updateScreen() {
   document.getElementById("newTask").value = "";
 }
 
-function deleteTask(element) {
-  console.log(element);
+function deleteTask(id) {
+  console.log(id);
 
-  tasks = tasks.filter((task) => task.id != element.getAttribute("id-data"));
+  tasks = tasks.filter(
+    (task) =>
+      task.id !=
+      document.querySelector(`[id-data="${id}"]`).getAttribute("id-data")
+  );
 
   updateScreen();
 }

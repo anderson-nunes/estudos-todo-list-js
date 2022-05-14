@@ -3,6 +3,11 @@
   margin: auto;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 #newTask {
   height: 35px;
   width: 80%;
@@ -14,4 +19,29 @@ button {
   color: white;
   border: none;
   cursor: pointer;
+  padding: 10px;
+}
+
+#list ul {
+  width: 100%;
+}
+
+#list {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.form-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list-item {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
 }
